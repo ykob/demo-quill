@@ -1,6 +1,7 @@
 var toolbarOptions = ["bold", "italic", "link", "image"];
 
-const quill = new Quill("#editor", {
+var button = document.getElementById("editor-button");
+var quill = new Quill("#editor", {
   modules: {
     syntax: true,
     toolbar: toolbarOptions,
@@ -8,3 +9,11 @@ const quill = new Quill("#editor", {
   placeholder: "文章を記入してください。",
   theme: "snow",
 });
+
+var submit = () => {
+  var delta = quill.getContents();
+  var content = JSON.stringify(delta);
+  console.log(content);
+};
+
+button.addEventListener("click", submit);
