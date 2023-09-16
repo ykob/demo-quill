@@ -1,13 +1,10 @@
-var toolbarOptions = [
-  ["bold", "italic"],
-  ["link", "image"],
-];
+var toolbarOptions = ["bold", "italic", "link", "image"];
 
 const quill = new Quill("#editor", {
   modules: {
     syntax: true,
     toolbar: toolbarOptions,
   },
-  placeholder: "本文を記入してください。",
+  placeholder: "文章を記入してください。",
   theme: "snow",
 });
