@@ -5,6 +5,12 @@
   z-index: 10;
   background-color: #fff;
 }
+.ql-editor {
+  min-height: 320px;
+}
+.ql-tooltip {
+  z-index: 100;
+}
 .button-wrapper {
   display: flex;
   justify-content: flex-end;
