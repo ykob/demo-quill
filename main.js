@@ -1,9 +1,13 @@
 var toolbarOptions = ["bold", "italic", "link", "image"];
-
 var button = document.getElementById("editor-button");
 var quill = new Quill("#editor", {
   modules: {
-    syntax: true,
+    clipboard: {
+      allowed: {
+        tags: ["strong"],
+        attributes: [],
+      },
+    },
     toolbar: toolbarOptions,
   },
   placeholder: "文章を記入してください。",
