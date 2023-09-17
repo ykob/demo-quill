@@ -1,4 +1,4 @@
-var toolbarOptions = ["bold", "italic", "link", "image"];
+var toolbarOptions = ["bold", "italic", "image"];
 var button = document.getElementById("editor-button");
 var quill = new Quill("#editor", {
   modules: {
