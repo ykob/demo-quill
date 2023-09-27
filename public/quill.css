@@ -1,3 +1,6 @@
+.ql-container {
+  font-size: 16px;
+}
 .ql-toolbar {
   position: sticky;
   top: 0;
@@ -6,7 +9,11 @@
   background-color: #fff;
 }
 .ql-editor {
+  padding: 24px;
   min-height: 320px;
+}
+.ql-editor.ql-blank::before {
+  left: 24px;
 }
 .ql-tooltip {
   z-index: 100;
