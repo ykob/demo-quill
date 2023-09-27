@@ -4,8 +4,8 @@ var quill = new Quill("#editor", {
   modules: {
     clipboard: {
       allowed: {
-        tags: ["strong"],
-        attributes: [],
+        tags: ["a", "img", "strong", "p"],
+        attributes: ["src", "href", "alt", "target"],
       },
     },
     toolbar: toolbarOptions,
