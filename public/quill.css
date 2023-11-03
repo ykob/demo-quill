@@ -1,6 +1,7 @@
 body {
-  background-color: #f3f3f3;
+  margin: 0;
   font-family: "Noto Sans JP", sans-serif;
+  background-color: rgb(245 245 244);
 }
 input {
   font-family: "Noto Sans JP", sans-serif;
@@ -8,16 +9,20 @@ input {
 
 /* Quillのスタイル上書き用 */
 .ql-container {
+  border: none !important;
   font-size: 16px;
+  font-family: inherit;
 }
 .ql-editor {
   padding: 16px;
   min-height: 320px;
   border: 1px solid #999;
+  border-radius: 4px;
   background-color: #fff;
 }
 .ql-editor.ql-blank::before {
   left: 16px;
+  font-style: normal;
 }
 .ql-tooltip {
   z-index: 100;
@@ -26,28 +31,50 @@ input {
 /* 独自の要素 */
 .container {
   max-width: 640px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
+  padding-inline: 12px;
 }
 .entry-title {
-  margin-bottom: 16px;
-}
-.entry-title input {
-  height: 44px;
-  padding-inline: 16px;
-  font-size: 16px;
+  margin-bottom: 24px;
 }
 .entry-title-input {
   width: 100%;
-  padding: 8px;
+  height: 44px;
   box-sizing: border-box;
+  padding-inline: 16px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 16px;
 }
-.toolbar {
+.label {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+.ql-snow.toolbar {
   display: flex;
   justify-content: flex-end;
+  gap: 8px;
   position: sticky;
   bottom: 0;
   right: 0;
-  border: 0 !important;
+  margin-top: 12px;
+  padding: 0 0 24px;
+  border: 0;
+}
+.ql-snow.ql-toolbar button {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 9999px;
+  background-color: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.ql-snow.ql-toolbar button svg {
+  width: 28px;
+  height: 28px;
 }
 .submit-container {
   display: flex;
@@ -55,11 +82,16 @@ input {
   margin-top: 16px;
 }
 .submit-button {
+  display: block;
   max-width: 240px;
   width: 100%;
   height: 48px;
   cursor: pointer;
+  border: 0;
   border-radius: 8px;
+  color: #fff;
   font-size: 16px;
   font-weight: bold;
+  background-color: rgb(16 185 129);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
