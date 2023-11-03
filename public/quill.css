@@ -1,38 +1,61 @@
+body {
+  background-color: #f3f3f3;
+}
+
+/* Quillのスタイル上書き用 */
 .ql-container {
   font-size: 16px;
 }
-.ql-toolbar {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 10;
+.ql-editor {
+  padding: 16px;
+  min-height: 320px;
+  border: 1px solid #999;
   background-color: #fff;
 }
-.ql-editor {
-  padding: 24px;
-  min-height: 320px;
-}
 .ql-editor.ql-blank::before {
-  left: 24px;
+  left: 16px;
 }
 .ql-tooltip {
   z-index: 100;
 }
+
+/* 独自の要素 */
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
 .entry-title {
   margin-bottom: 16px;
+}
+.entry-title input {
+  height: 44px;
+  padding-inline: 16px;
+  font-size: 16px;
 }
 .entry-title-input {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
 }
-.button-wrapper {
+.toolbar {
   display: flex;
   justify-content: flex-end;
   position: sticky;
   bottom: 0;
-  left: 0;
-  z-index: 10;
-  padding: 12px;
-  background-color: #ddd;
+  right: 0;
+  border: 0 !important;
+}
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.submit-button {
+  max-width: 240px;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
 }

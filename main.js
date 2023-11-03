@@ -1,5 +1,4 @@
-var toolbarOptions = ["bold", "italic", "image"];
-var button = document.getElementById("editor-button");
+var button = document.getElementById("submit-button");
 var quill = new Quill("#editor", {
   modules: {
     clipboard: {
@@ -8,7 +7,7 @@ var quill = new Quill("#editor", {
         attributes: ["src", "href", "alt", "target"],
       },
     },
-    toolbar: toolbarOptions,
+    toolbar: "#toolbar",
   },
   placeholder: "文章を記入してください。",
   theme: "snow",
