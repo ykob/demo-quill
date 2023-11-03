@@ -95,3 +95,44 @@ input {
   background-color: rgb(16 185 129);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
+.progress-overlay {
+  opacity: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.progress-overlay.is-shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+.progress-dialog {
+  width: 160px;
+  height: 160px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  padding: 24px 16px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+@keyframes progress-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.progress-icon {
+  width: 72px;
+  height: 72px;
+  animation: progress-icon 1s linear infinite;
+}
