@@ -1,5 +1,7 @@
-var button = document.getElementById("submit-button");
-var quill = new Quill("#editor", {
+import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
+
+const button = document.getElementById("submit-button");
+const quill = new Quill("#editor", {
   modules: {
     clipboard: {
       allowed: {
@@ -13,10 +15,16 @@ var quill = new Quill("#editor", {
   theme: "snow",
 });
 
-var submit = () => {
-  var delta = quill.getContents();
-  var content = JSON.stringify(delta);
-  console.log(content);
+const submit = () => {
+  const delta = quill.getContents();
+  const converter = new QuillDeltaToHtmlConverter(delta.ops);
+  console.log(
+    converter
+      .convert()
+      .replace(/<br\/><br\/>/g, "</p><p>")
+      .replace(/<p><br\/>/g, "<p>")
+      .replace(/<br\/><\/p>/g, "</p>")
+  );
 };
 
 button.addEventListener("click", submit);
