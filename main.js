@@ -40,6 +40,7 @@ const submit = () => {
     inputEntryTitle.value = "";
     quill.setContents([{ insert: "\n" }]);
     progressOverlay.classList.remove("is-shown");
+    window.scrollTo(0, 0);
   }, 1000);
 };
 
