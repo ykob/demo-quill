@@ -1,5 +1,6 @@
 import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
 
+const inputEntryTitle = document.getElementById("entry-title-input");
 const button = document.getElementById("submit-button");
 const progressOverlay = document.getElementById("progress-overlay");
 const quill = new Quill("#editor", {
@@ -36,6 +37,7 @@ const submit = () => {
   );
   setTimeout(() => {
     isSubmitting = false;
+    inputEntryTitle.value = "";
     quill.setContents([{ insert: "\n" }]);
     progressOverlay.classList.remove("is-shown");
   }, 1000);
