@@ -3,7 +3,8 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   background-color: rgb(245 245 244);
 }
-input {
+input,
+button {
   font-family: "Noto Sans JP", sans-serif;
 }
 
