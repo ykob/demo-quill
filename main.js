@@ -22,6 +22,15 @@ const submit = () => {
   if (isSubmitting) {
     return;
   }
+  if (inputEntryTitle.value === "") {
+    window.alert("タイトルを入力してください。");
+    return;
+  }
+  if (quill.getText().trim() === "") {
+    window.alert("本文を入力してください。");
+    return;
+  }
+  window.confirm("この内容で投稿してよろしいですか？");
 
   const delta = quill.getContents();
   const converter = new QuillDeltaToHtmlConverter(delta.ops);
