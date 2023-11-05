@@ -1,4 +1,8 @@
+import Quill from "quill";
+import "quill-paste-smart";
 import { QuillDeltaToHtmlConverter } from "quill-delta-to-html";
+import "quill/dist/quill.snow.css";
+import "./public/quill.css";
 
 const inputEntryTitle = document.getElementById("entry-title-input");
 const button = document.getElementById("submit-button");

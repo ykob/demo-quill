@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  background-color: rgb(245 245 244);
+}
+input,
+button {
+  font-family: "Noto Sans JP", sans-serif;
+}
+.container {
+  max-width: 640px;
+  margin: 0 auto 60px;
+  padding-inline: 12px;
+}
+.entry-title {
+  margin-bottom: 24px;
+}
+.entry-title-input {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  padding-inline: 16px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.label {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+.entry-body {
+  min-height: 430px;
+}
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+.submit-button {
+  display: block;
+  max-width: 240px;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(16 185 129);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.progress-overlay {
+  opacity: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.progress-overlay.is-shown {
+  opacity: 1;
+  pointer-events: auto;
+}
+.progress-dialog {
+  width: 160px;
+  height: 160px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  padding: 24px 16px;
+  border-radius: 16px;
+  background-color: #fff;
+}
+@keyframes progress-icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.progress-icon {
+  width: 72px;
+  height: 72px;
+  animation: progress-icon 1s linear infinite;
+}
